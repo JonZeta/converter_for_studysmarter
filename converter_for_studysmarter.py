@@ -121,9 +121,6 @@ for i, pregunta in enumerate(preguntas[1:], start=1):
         
 
     # Unimos 'QUESTION' con la pregunta modificada, además le añado dobles comillas y un salto de linea siempre que no sea el primer question
-    # if i != 1:
-    #     preguntas[i] = '\n\"QUESTION' + pregunta
-    # else:
     preguntas[i] = '\"QUESTION' + pregunta
     
     # Unimos las preguntas de nuevo en un solo string
