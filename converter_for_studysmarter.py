@@ -116,11 +116,14 @@ for i, pregunta in enumerate(preguntas[1:], start=1):
     # Unimos las preguntas de nuevo en un solo string
     texto_modificado = ''.join(preguntas)
 
-    #Finalmente escrivimos el csv, para posterior importarlo en https://www.studysmarter.es/
-    
+    #Escribimos el csv, para posterior importarlo en https://www.studysmarter.es/
     with open('resultado.csv', 'w') as res:
         res.write(texto_modificado)
         porcentaje = int((i/len(preguntas)) * 100)
         print(f"Completado: {porcentaje}%", end="\r")
-
-
+#Finalmente añado la cabecera al csv y la escribimos en el fichero
+texto_modificado = "Question\tAnswer A\tanswer is correct (TRUE if yes, FALSE if no)\tAnswer B\tanswer is correct (TRUE if yes, FALSE if no)\tAnswer C\tanswer is correct (TRUE if yes, FALSE if no)\tAnswer D\tanswer is correct (TRUE if yes, FALSE if no)\tAnswer E\tanswer is correct (TRUE if yes, FALSE if no)\tAnswer F\tanswer is correct (TRUE if yes, FALSE if no)\tTags\tHints\tExplanation\n{}".format(texto_modificado)
+with open('resultado.csv', 'w') as res:
+        res.write(texto_modificado)
+        porcentaje = int((i/len(preguntas)) * 100)
+        print(f"Completado: {porcentaje}%", end="\r")
