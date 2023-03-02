@@ -196,3 +196,4 @@ if args.txt is not None:
             res.write(texto_modificado)
             porcentaje = int((i/len(preguntas)) * 100)
             print(f"Completado: {porcentaje}%", end="\r")
+            print("\nSe he creado el archivo "+archivo)
